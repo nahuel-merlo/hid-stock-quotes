@@ -1,4 +1,4 @@
-cabal-version: 2.4
+cabal-version: 2.0
 name: stockquotes
 version: 0.0.1
 synopsis: Stockquotes processes historical stock quotes data.
@@ -9,5 +9,16 @@ executable stockquotes
     main-is: Main.hs
     other-modules: Param QuoteData StatReport Charts HtmlReport
     build-depends:
-        base
+        Chart >=1.8 && <1.10
+        , Chart-diagrams >=1.8 && <1.10
+        , base >=4.12 && <5
+        , blaze-colonnade >=1.1 && <1.3
+        , blaze-html ==0.9.*
+        , bytestring >=0.10 && <0.13
+        , cassava ==0.5.*
+        , colonnade >=1.1 && <1.3
+        , fmt >=0.5 && <0.7
+        , optparse-applicative >=0.14 && <0.19
+        , text >=1.2 && <2.2
+        , time >=1.8 && <1.15
     default-language: Haskell2010
