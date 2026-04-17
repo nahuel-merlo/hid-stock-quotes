@@ -32,9 +32,7 @@ plotchart title quotes fname = do
             $ def
 
         volumesLayout =
-            layout_title .~ title
-            $ layout_plots .~ [ toPlot $ qline "Close" closings green,
-                                toPlot $ candle "Candle" candles cyan ]
+            layout_plots .~ [ plotBars $ bars "Volume" volumes gray ]
             $ def
         
         candle label values color =
