@@ -37,6 +37,9 @@ instance Buildable StatEntry where
         +|maxVal|+" (max), "
         +|daysBetweenMinMax|+" (days)"
 
+showPrice :: Double -> Builder
+showPrice = fixedF decimalPlacesFloating
+
 textReport :: [StatEntry] -> String
 textReport = ascii colStats
     where
