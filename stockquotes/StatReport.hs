@@ -76,6 +76,3 @@ statInfo quotes = fmap qFieldStatInfo [minBound .. maxBound]
                 minVal = StatValue decPlaces mn
                 maxVal = StatValue decPlaces mx
             in StatEntry {..}
-
--- Test Line 
--- readQuotes "stockquotes/data/quotes.csv" >>= putStr . textReport . statInfo

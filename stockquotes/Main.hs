@@ -28,7 +28,6 @@ work params = do
 
 generateReports :: (Functor t, Foldable t) => Params -> t QuoteData -> IO ()
 generateReports Params {..} quotes = do
-    putStrLn $ show (Params {..})
     unless silent $ putStrLn textRpt
     when chart $ plotchart title quotes chartFname
     saveHtml htmlFile htmlRpt

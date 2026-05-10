@@ -7,7 +7,7 @@ build-type: Simple
 executable stockquotes
     hs-source-dir: stockquotes
     main-is: Main.hs
-    other-modules: Param QuoteData StatReport Charts HtmlReport
+    other-modules: Param QuoteData StatReport Charts HtmlReport QuoteIO
     build-depends:
         Chart >=1.8 && <1.10
         , Chart-diagrams >=1.8 && <1.10

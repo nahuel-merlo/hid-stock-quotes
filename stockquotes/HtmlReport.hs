@@ -14,7 +14,6 @@ import Data.Foldable (traverse_)
 
 import StatReport
 import QuoteData
-import QuoteIO
 
 viaFmt :: Buildable a => a -> Html
 viaFmt = text . pretty
@@ -56,5 +55,3 @@ htmlReport docTitle quotes statEntries images = renderHtml $ docTypeHtml $ do
     where
         tabStyle = "table {border-collapse: collapse}" <>
                    "td, th {border: 1px solid black; padding: 5px}"
-
-printHtml = readQuotes "stockquotes/data/quotes.csv" >>= printCompactHtml . (encodeHtmlTable mempty colStats) . statInfo 
